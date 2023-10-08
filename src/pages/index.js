@@ -3,6 +3,7 @@ import Head from 'next/head';
 import {selectableData} from "@/data/selectableConfig";
 import {modelInfo} from "@/data/modelInfo";
 import {useState} from "react";
+import Image from "next/image";
 
 export async function getServerSideProps (context) {
 
@@ -121,7 +122,7 @@ export default function Home({selectables, modelInfo, sessionid}) {
                     </div>
 
 
-                    <img style={{width: "90vw", display: "block", marginLeft: "auto", marginRight: "auto"}}
+                    <Image style={{width: "90vw", display: "block", marginLeft: "auto", marginRight: "auto"}}
                          src="/mercedes.jpeg" alt="Picture of a mercedes"/>
                     <h1>{modelInfo.name}</h1>
                     {selectables.componentCategories.map((category, index) =>
